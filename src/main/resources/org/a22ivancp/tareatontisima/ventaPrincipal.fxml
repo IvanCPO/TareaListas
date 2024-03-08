@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="250" minWidth="400" fx:id="mainBorderPane"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.a22ivancp.tareatontisima.Controller">
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <menus>
+                    <Menu text="Fichero">
+                        <items>
+                            <MenuItem text="Novo..." onAction="#mostrarDialogoNovaTarefa"/>
+                            <SeparatorMenuItem />
+                            <MenuItem text="Sair" onAction="#cerrarApp"/>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+            <HBox alignment="CENTER_LEFT">
+                <Button fx:id="toolAdd" text="Añadir" />
+                <ToggleButton fx:id="toolFilter" text="Filtro"/>
+            </HBox>
+        </VBox>
+    </top>
+<!--    <ListView BorderPane.alignment="CENTER_LEFT">-->
+<!--    </ListView>-->
+    <left>
+        <ListView fx:id="listViewTarea" onKeyPressed="#suprimirTarefa"/>
+    </left>
+    <center>
+        <VBox style="-fx-background-color: white">
+            <TextArea fx:id="areaDetalles" wrapText="true" />
+            <HBox>
+                <Label text="Data: ">
+                   <font>
+                      <Font name="Times New Roman Bold" size="20.0" />
+                   </font>
+                </Label>
+                <Label fx:id="dateValue" text="VALUE_FECHA" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
+

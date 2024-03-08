@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.a22ivancp.tareatontisima.NovaTarefaDialogController">
+<!--    <headerText/>-->
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Descrición:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="description" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Detalles:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="detalles" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Deadline:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <DatePicker fx:id="limitDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints maxWidth="300.0" />
+            <ColumnConstraints maxWidth="300.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+</DialogPane>
